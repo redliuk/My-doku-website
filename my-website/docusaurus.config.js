@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Luca Comparini',
+  title: 'LucaComparini',
   tagline: 'Software Developer',
   favicon: 'img/favicon.ico',
 
@@ -83,7 +83,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: '',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -91,9 +91,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'sidebar1',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Solution Architect',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'sidebar2',
+            position: 'left',
+            label: 'Terraform Code',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
