@@ -10,7 +10,7 @@ const docs = [
     Icon: FaMicrosoft,
     color: '#0078d4',
     description: 'Cloud architecture documentation — design decisions, diagrams, and implementation notes.',
-    to: '/docs/sidebar1/intro',
+    to: '/docs/sidebar1/energy-trading-settlement',
   },
   {
     title: 'Terraform Code',
