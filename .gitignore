@@ -1,5 +1,4 @@
 .vscode/
-
-# Include .github but exclude memory (local-only context for agents)
-!.github/
 .github/memory/
+.github/agents/
+.github/copilot-instructions.md

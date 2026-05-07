@@ -6,25 +6,256 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #3578e5;
+  --ifm-color-primary-dark: #1d68e1;
+  --ifm-color-primary-darker: #1b62d4;
+  --ifm-color-primary-darkest: #1651af;
+  --ifm-color-primary-light: #4e89e8;
+  --ifm-color-primary-lighter: #5a91ea;
+  --ifm-color-primary-lightest: #80aaf0;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #6ea8fe;
+  --ifm-color-primary-dark: #4c93fe;
+  --ifm-color-primary-darker: #3b88fd;
+  --ifm-color-primary-darkest: #0866fc;
+  --ifm-color-primary-light: #90bdfe;
+  --ifm-color-primary-lighter: #a1c7fe;
+  --ifm-color-primary-lightest: #d4e5ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ── Section spacing ── */
+.section {
+  padding: 5rem 0;
+}
+
+.section--alt {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ifm-color-primary), var(--ifm-color-emphasis-300));
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ifm-color-emphasis-400);
+  border: 3px solid var(--ifm-background-color);
+  transition: background 0.2s;
+}
+
+.timelineItem--current::before {
+  background: var(--ifm-color-primary);
+  box-shadow: 0 0 0 4px rgba(53, 120, 229, 0.2);
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineRole {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timelineBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  padding: 0.15em 0.6em;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.timelineCompany {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.timelineDuration {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.timelineDesc {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ── Certifications ── */
+.certGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.certCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  min-width: 240px;
+  max-width: 300px;
+  background: var(--ifm-background-color);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.certCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .certCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.certIcon {
+  margin-bottom: 0.75rem;
+}
+
+.certName {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.certIssuer {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+/* ── Contact ── */
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.contactLink:hover {
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+}
+
+/* ── Docs Preview ── */
+.docsPreviewGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.docsPreviewCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 2rem;
+  min-width: 280px;
+  max-width: 380px;
+  flex: 1;
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-color);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.docsPreviewCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .docsPreviewCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.docsPreviewCardIcon {
+  margin-bottom: 0.75rem;
+}
+
+.docsPreviewCard h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.docsPreviewCard p {
+  color: var(--ifm-color-emphasis-700);
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.docsPreviewCardArrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
 }
