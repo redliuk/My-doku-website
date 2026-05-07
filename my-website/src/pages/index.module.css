@@ -7,12 +7,12 @@
   padding: 4.5rem 0;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #1a3a5c 0%, #3578e5 50%, #5a9cf5 100%);
+  background: #1e3a5f;
   color: #fff;
 }
 
 [data-theme='dark'] .heroBanner {
-  background: linear-gradient(135deg, #0d1b2a 0%, #1b2e4a 50%, #2a4a7f 100%);
+  background: #162d4a;
 }
 
 .heroContainer {
@@ -26,9 +26,9 @@
 }
 
 .heroAvatar {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 180px;
+  height: 240px;
+  border-radius: 12px;
   object-fit: cover;
   border: 4px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
@@ -103,6 +103,15 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.heroCertTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
 }
 
 .heroCertCard {

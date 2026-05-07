@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
-import { SiTerraform, SiGithubactions, SiOpenai } from 'react-icons/si';
+import { SiTerraform, SiGithubactions, SiOpenai, SiGithubcopilot } from 'react-icons/si';
 import { FaMicrosoft } from 'react-icons/fa6';
 import { VscServerProcess } from 'react-icons/vsc';
 import { FiCloud, FiGitMerge } from 'react-icons/fi';
@@ -18,6 +18,12 @@ const WorkWithList = [
     Icon: SiTerraform,
     color: '#7b42bc',
     description: 'Infrastructure as Code for repeatable, version-controlled environments.',
+  },
+  {
+    title: 'GitHub Copilot',
+    Icon: SiGithubcopilot,
+    color: '#000000',
+    description: 'AI-assisted development — code generation, agentic workflows, and custom agents.',
   },
 ];
 
@@ -67,9 +73,9 @@ export default function HomepageFeatures() {
     <>
       <section className={styles.features}>
         <div className="container">
-          <Heading as="h2" className="sectionTitle">What I Work With</Heading>
+          <Heading as="h2" className="sectionTitle">What I Build</Heading>
           <div className={clsx('row', styles.featureRow)}>
-            {WorkWithList.map((props, idx) => (
+            {BuildList.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}
           </div>
@@ -77,9 +83,9 @@ export default function HomepageFeatures() {
       </section>
       <section className={clsx(styles.features, styles.featuresAlt)}>
         <div className="container">
-          <Heading as="h2" className="sectionTitle">What I Build</Heading>
+          <Heading as="h2" className="sectionTitle">What I Work With</Heading>
           <div className={clsx('row', styles.featureRow)}>
-            {BuildList.map((props, idx) => (
+            {WorkWithList.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}
           </div>

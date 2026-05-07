@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Luca Comparini',
-  tagline: 'Solution Architect | DevOps Engineer | AI Enthusiast',
+  tagline: 'Solution Architect | DevOps Engineer | AI Engineer',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -91,10 +91,27 @@ const config = {
         },
         items: [
           {
+            type: 'html',
+            position: 'left',
+            value: '<span style="font-weight:600;color:var(--ifm-navbar-link-color);opacity:0.7;cursor:default;">See what I\'ve done as:</span>',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'sidebar1',
             position: 'left',
             label: 'Solution Architect',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'sidebarDevops',
+            position: 'left',
+            label: 'DevOps Engineer',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'sidebarAi',
+            position: 'left',
+            label: 'AI Engineer',
           },
           {
             href: 'https://github.com/redliuk',

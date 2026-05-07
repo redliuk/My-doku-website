@@ -3,12 +3,9 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import DocsPreview from '@site/src/components/DocsPreview';
 import Timeline from '@site/src/components/Timeline';
-import Contact from '@site/src/components/Contact';
 import { FaMicrosoft } from 'react-icons/fa6';
 import { SiHashicorp } from 'react-icons/si';
-import { FiGlobe } from 'react-icons/fi';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -31,9 +28,10 @@ function HomepageHeader() {
           </Heading>
           <p className={styles.heroTagline}>{siteConfig.tagline}</p>
           <p className={styles.heroDescription}>
-            I design enterprise cloud solutions on Azure with an IaC-first approach,
-            build CI/CD pipelines across GitHub, GitLab, and Azure DevOps,
-            and explore Agentic AI and RAG patterns.
+            I design enterprise cloud solutions on Azure with an IaC-first mindset.
+            I build CI/CD pipelines across GitHub, GitLab, and Azure DevOps.
+            I bring Agentic AI and RAG patterns into business applications — always
+            with cost awareness and end-to-end accountability.
           </p>
           <div className={styles.buttons}>
             <Link
@@ -43,12 +41,15 @@ function HomepageHeader() {
             </Link>
             <a
               className={clsx('button button--lg', styles.buttonOutline)}
-              href="#contact">
-              Get in Touch
+              href="/My-doku-website/Curriculum_Vitae_Luca_Comparini.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              Download CV
             </a>
           </div>
         </div>
         <div className={styles.heroRight}>
+          <div className={styles.heroCertTitle}>Certifications</div>
           <div className={styles.heroCertCard}>
             <FaMicrosoft size={22} color="#0078d4" />
             <div>
@@ -70,10 +71,10 @@ function HomepageHeader() {
             className={styles.heroCertCard}
             style={{textDecoration: 'none', color: 'inherit', cursor: 'pointer'}}
           >
-            <FiGlobe size={22} color="#c0392b" />
+            <span style={{fontWeight: 900, fontSize: '1rem', color: '#c0392b'}}>IELTS</span>
             <div>
-              <div className={styles.heroCertName}>IELTS C1</div>
-              <div className={styles.heroCertIssuer}>British Council</div>
+              <div className={styles.heroCertName}>C1 Advanced</div>
+              <div className={styles.heroCertIssuer}>Cambridge</div>
             </div>
           </a>
         </div>
@@ -91,9 +92,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        <DocsPreview />
         <Timeline />
-        <Contact />
       </main>
     </Layout>
   );
